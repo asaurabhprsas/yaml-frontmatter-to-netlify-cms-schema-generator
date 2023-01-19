@@ -1,0 +1,21 @@
+{
+  "name": "JavaScriptToNetlifyCMSSchemaGenerator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "typescript": "^4.9.4"
+  },
+  "scripts": {
+    "build": "npx tsc",
+    "start": "yarn build && node --enable-source-maps build/index.js",
+    "dev": "yarn build -w && npx nodemon build/index.js"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "json-s-generator": "^0.0.4",
+    "source-map-support": "^0.5.21",
+    "yaml": "^2.2.1"
+  }
+}
