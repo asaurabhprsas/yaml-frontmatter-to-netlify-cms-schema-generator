@@ -1,0 +1,86 @@
+- label: content
+  name: content
+  widget: object
+  fields:
+    - label: cardsList
+      name: cardsList
+      widget: list
+      fields:
+        - label: imageUrl
+          name: imageUrl
+          widget: string
+        - label: alt
+          name: alt
+          widget: string
+        - label: width
+          name: width
+          widget: number
+          value_type: int
+        - label: height
+          name: height
+          widget: number
+          value_type: int
+    - label: heroSection
+      name: heroSection
+      widget: object
+      fields:
+        - label: title
+          name: title
+          widget: string
+        - label: descriprion
+          name: descriprion
+          widget: string
+        - label: bgImage
+          name: bgImage
+          widget: object
+          fields:
+            - label: imageUrl
+              name: imageUrl
+              widget: string
+            - label: alt
+              name: alt
+              widget: string
+            - label: width
+              name: width
+              widget: number
+              value_type: int
+            - label: height
+              name: height
+              widget: number
+              value_type: int
+        - label: titleCards
+          name: titleCards
+          widget: list
+          fields:
+            - label: imageUrl
+              name: imageUrl
+              widget: string
+            - label: alt
+              name: alt
+              widget: string
+            - label: width
+              name: width
+              widget: number
+              value_type: int
+            - label: height
+              name: height
+              widget: number
+              value_type: int
+            - label: nestedProp
+              name: nestedProp
+              widget: object
+              fields:
+                - label: abcd
+                  name: abcd
+                  widget: object
+                  fields:
+                    - label: efgh
+                      name: efgh
+                      widget: list
+                      fields:
+                        - label: name
+                          name: name
+                          widget: string
+                        - label: value
+                          name: value
+                          widget: boolean

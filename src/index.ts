@@ -1,5 +1,5 @@
 // change this only
-const inputFileName = "dapps_content.md";
+const inputFileName = "demoInput.md";
 
 import "source-map-support";
 import fs from "fs";
@@ -31,6 +31,9 @@ const getPropertiesByWidgetType = (
     props.multiple = true;
     props.options = [];
     props.checkThis = "checkThis";
+  }else if(type === "integer"){
+    props.widget = "number"
+    props.value_type = "int"
   }
   return props;
 };
@@ -55,8 +58,8 @@ const run = (propertyValueObj: IProperty |IProperty[] | undefined) => {
       }
       const type = propValueObj_.type;
       const tempObj: { [key: string]: any } = {
-        name: prop,
         label: prop,
+        name: prop,
         widget: type === "array" ? "list" : type,
         ...getPropertiesByWidgetType(type, propValueObj_?.items),
       };
